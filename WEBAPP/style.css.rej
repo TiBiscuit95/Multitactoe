@@ -1,0 +1,108 @@
+diff a/WEBAPP/public/style.css b/WEBAPP/public/style.css	(rejected hunks)
+@@ -1,105 +1,105 @@
+ @font-face{
+     font-family: 'GermaniaOne';
+     font-weight: 400;
+
++    src: url(../font/GermaniaOne-Regular.woff) format('woff'),
++        url(../font/GermaniaOne-Regular.ttf) format('truetype')
+ }       
+ 
+ *{
+     box-sizing: border-box;
+     margin: 0;
+     padding: 0;
+ }
+ 
+ 
+ 
+ body{
+     background-color: #ffffff;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+     font-family: 'GermaniaOne', sans-serif;
+     height: 100vh;
+ }
+ 
+ .container{
+     position: relative;
+     overflow: hidden;
+     min-height: 480px;
+     width: 768px;
+     max-width: 100%;
+     background-color: #ffffff;
+     border-radius: 10px;
+     box-shadow: 0 8px 24px rgba(0, 32, 63, .45),
+                 0 8px 8px rgba(0, 32, 63, .45);
+ }
+ 
+ .form-container{
+     position: absolute;
+     top: 0;
+     height: 100%;
+     transition: .6s ease-in-out ;
+ }
+ 
+ .sign-up-container{
+     left: 0;
+     width: 50%;
+     opacity: 0;
+     z-index: 1;
+ }
+ 
+ .container.panel-active .sign-up-container {
+     transform: translateX(100%);
+     opacity: 1;
+     z-index: 5;
+     animation: show .6s;
+ }
+ 
+ @keyframes show {
+         0%, 49.99% {
+             opacity: 0;
+             z-index: 1;
+         }
+ 
+         50%, 100% {
+          opacity: 1;
+             z-index: 5;
+         }
+     }
+ 
+ .container.panel-active .login-container{
+     transform: translateX(-100%);
+ }
+ 
+ .login-container{
+     left: 0;
+     width: 50%;
+     z-index: 2;
+ }
+ 
+ form{
+     background-color: #ffffff;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     padding: 0 50px;
+     height: 100%;
+     text-align: center;
+ }
+ 
+ input{
+     background-color: #eadeda;
+     border: none;
+     padding: 12px 15px;
+     margin: 8px 0;
+     width: 100%;
+ }
+ 
+ button.ghost{
+     background-color: #bfb8ad;
+ }
+ 
+ button{
+     background-color: #bfb8ad;

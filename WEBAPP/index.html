@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Ornidateur?</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Germania+One&display=swap" rel="stylesheet">
+ 
+</head>
+<body>
+    <div class="container">
+        <div class="form-container sign-up-container">
+            <form id="signup-form">
+                <div class="form-control">
+                <h1>Créer un compte</h1>
+                <span>Utilisez votre email pour vous inscrire</span>
+                <input type="text" id="pseudo" name="pseudo" placeholder="Pseudo" />
+                <small>Message d'erreur</small>
+            </div>
+            <div class="form-control">
+                <input type="email" id="e_mail" name="e_mail" placeholder="Email" />
+                <small>Message d'erreur</small>
+            </div>
+            <div class="form-control">
+                <input type="password" id="password" name="password" placeholder="Mot de passe" />
+                <small>Message d'erreur</small>
+                <button type="submit" value="signup-form">Créer le compte</button>            
+            </div>
+            </form>
+        </div>
+        <div class="form-container signin-container">
+            <form id="signin-form">
+                <h1>Se connecter</h1>
+                <span>Connectez-vous avec vos informations</span>
+                <div class="form-control">
+                <input type="text" id="pseudo-signin" placeholder="Pseudo" />
+                <small>Message d'erreur</small>
+            </div>
+            <div class="form-control">
+                <input type="password" id="password-signin" placeholder="Mot de passe"/>
+                <small>Message d'erreur</small>                
+                <a href="mdp_oublie.html">Mot de passe oublié ?</a>
+                <button type="submit" value="signin-form">Se connecter</button>
+            </div>
+            </form>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Bienvenue !</h1>
+                    <p>Pour rester connecté avec nous, veuillez vous connecter avec vos informations personnelles</p>
+                    <button class="ghost" id="signIn">Se connecter</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>Bonjour !</h1>
+                    <p>Entrez vos informations personnelles et commencez votre voyage avec nous</p>
+                    <button class="ghost" id="signUp">Créer un compte</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="meca.js"></script>
+</body>
+</html>

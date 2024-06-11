@@ -1,0 +1,268 @@
+/* Importation de la font*/
+@font-face{
+    font-family: 'GermaniaOne';
+    font-weight: 400;
+    src: url(font/GermaniaOne-Regular.woff) format('woff'),
+        url(font/GermaniaOne-Regular.ttf) format('truetype')
+}      
+ 
+/* Le tout */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+ 
+ 
+/* La partie body */
+body{
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'GermaniaOne', sans-serif;
+    height: 100vh;
+}
+ 
+/* Tou7s les containers */
+ 
+.container{
+    position: relative;
+    overflow: hidden;
+    min-height: 480px;
+    width: 768px;
+    max-width: 100%;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(0, 32, 63, .45),
+                0 8px 8px rgba(0, 32, 63, .45);
+}
+ 
+/* le container formulaire */
+.form-container{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    transition: .6s ease-in-out ;
+}
+ 
+/* Le container inscription */
+.sign-up-container{
+    left: 0;
+    width: 50%;
+    opacity: 0;
+    z-index: 1;
+}
+ 
+/* La transition vers le formulaire d'inscription */
+.container.panel-active .sign-up-container {
+    transform: translateX(100%);
+    opacity: 1;
+    z-index: 5;
+    animation: show .6s;
+}
+ 
+/* Gestion des keyframes (affichage et fondu) */
+ 
+@keyframes show {
+        0%, 49.99% {
+            opacity: 0;
+            z-index: 1;
+        }
+ 
+        50%, 100% {
+         opacity: 1;
+            z-index: 5;
+        }
+    }
+ 
+    /* transition de la partie connexion */
+.container.panel-active .login-container{
+    transform: translateX(-100%);
+}
+ 
+/* le container de connexion */
+.signin-container{
+    left: 0;
+    width: 50%;
+    z-index: 2;
+}
+ 
+/* Le formulair de façon général */
+ 
+form{
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 50px;
+    height: 100%;
+    text-align: center;
+}
+ 
+/* Les barres d'entrés */
+input{
+    background-color: #eadeda;
+    border: none;
+    padding: 12px 15px;
+    margin: 8px 0;
+    width: 100%;
+    font-family: 'GermaniaOne', sans-serif;
+   
+}
+ 
+/* Les boutons de transition */
+button.ghost{
+    background-color: #bfb8ad;
+    font-family: 'GermaniaOne', sans-serif;
+}
+ 
+ 
+/*Les boutons*/
+button{
+    background-color: #bfb8ad;
+    color: #2C2A4A;
+    border: 1px solid #bfb8ad;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 16px 32px;
+    margin-top: 24px;
+    letter-spacing: 1px;
+    border-radius: 50px;
+    border-color: #2C2A4A;
+    transition: .2s ease-in;
+    font-family: 'GermaniaOne', sans-serif;
+}
+ 
+/* Bouton au survol */
+button:hover{
+    cursor: pointer;
+    background-color: #2C2A4A;
+    color: #ffffff;
+}
+ 
+/* Les bouttons quand on l'active */
+button:active{
+    transform: scale(.95);
+}
+ 
+/* Les titres H1 */
+h1{
+    margin: 0;
+    font-size: 24px;
+}
+ /*Les span*/
+span{
+    font-size: 14px;
+}
+/*Les a*/
+a{
+    text-decoration: none;
+    font-size: 14px;
+    margin: 8px 0 16px;
+    color : #998888;
+}
+ 
+/*Le container overlay*/
+.overlay-container{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 100;
+    transition: transform .6s ease-in-out;
+}
+ 
+ 
+.container.container.panel-active .overlay-container{
+    transform: translateX(-100%);
+}
+ 
+/*L'overlay*/
+.overlay{
+    background: linear-gradient(to right, #2C2A4A, #e7f0fd);
+    background: #EADEDA;
+    color: #2C2A4A;
+    position: relative;
+    left: -100%;
+    height: 100%;
+    width: 200%;
+    transform: translateX(0);
+    transition: transform .6s ease-in-out;
+}
+ 
+.container.panel-active .overlay{
+    transform: translateX(50%);
+}
+ 
+.overlay-panel{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    transform: translateX(0);
+    transition: transform .6s ease-in-out;
+}
+ 
+.overlay-left{
+    transform: translateX(-20%);
+}
+ 
+.container.panel-active .overlay-left{
+    transform: translateX(0);
+}
+ 
+.overlay-right{
+    right: 0;
+    transform: translateX(0);
+}
+ 
+.container.panel-active .overlay-right{
+    transform: translateX(20%);
+}
+ 
+p{
+    font-size: 14px;
+    font-weight: 100;
+    line-height: 20px;
+    letter-spacing: .5px;
+    margin: 20px 0 30px;
+}
+ 
+ 
+.form-control small{
+    visibility: hidden;
+}
+ 
+.form-control.error small {
+    color: #e74c3c;
+    visibility: visible;
+}
+ 
+.form-control.success input{
+    color:#2a9300;
+ 
+}
+ 
+.form-control.error input{
+    color:#e74c3c;
+    background-color: #e7c2be;
+}
+ 
+#password{
+    margin-top: 5px;
+}
+ 
+#pseudo{
+    margin-bottom: 0px;
+}

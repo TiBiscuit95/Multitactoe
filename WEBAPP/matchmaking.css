@@ -1,0 +1,185 @@
+@font-face{
+        font-family: 'GermaniaOne';
+        font-weight: 400;
+        src: url(../font/GermaniaOne-Regular.woff) format('woff'),
+        url(../font/GermaniaOne-Regular.ttf) format('truetype');
+}
+ 
+ 
+*{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+}
+ 
+h1{
+        position: absolute;
+        display: flex;
+        margin: 8px 0 16px;
+        top: 25px;
+        align-items: center;
+        font-family: 'GermaniaOne';
+        display: flex;
+}
+ 
+h2{
+        position:absolute;
+        top: 200px;
+}
+ 
+body{
+        background-color: #FFFFFF;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        font-family: 'GermaniaOne', sans-serif;
+        min-height: 100vh;
+        margin: 0; /* Enlever la marge par défaut */
+        background: linear-gradient(to right, #2C2A4A, #e7f0fd);
+        background: #EADEDA;
+}
+ 
+button{
+        background-color: #bfb8ad;
+        font-family: 'GermaniaOne';
+        color: #2c2a4a;
+        border: 1px solid #bfb8ad;
+        font-size: 20px;
+        font-weight: bold;
+        padding: 20px 40px;
+        margin-top: 24px;
+        letter-spacing: 1px;
+        border-radius: 50px;
+        border-color: #2c2a4a;
+        transition: .2s ease-in;
+        box-shadow: 0 2px 8px rgba(0, 32, 63, .45),
+                                0 2px 2px rgba(0, 32, 63, .45)
+}
+ 
+button:hover{
+        cursor: pointer;
+        background-color: #2c2a4a;
+        color:#FFFFFF;
+}
+ 
+button:active{
+        transform: scale(.75);
+}
+ 
+ 
+ 
+.loader {
+        align-items: center;
+        justify-content: center;
+        width: 16px;
+        height: 16px;
+        box-shadow: 0 30px, 0 -30px;
+        border-radius: 4px;
+        background: currentColor;
+        display: block;
+        margin: -50px auto 0;
+        position: relative;
+        color: #2c2a4a;
+        transform: translateY(30px);
+        box-sizing: border-box;
+        animation: animloader 2s ease infinite;
+        margin: 0;
+        top : 350px;
+    }
+ 
+    .loader::after,
+    .loader::before {
+        content: '';  
+        box-sizing: border-box;
+        width: 16px;
+        height: 16px;
+        box-shadow: 0 30px, 0 -30px;
+        border-radius: 4px;
+        background: currentColor;
+        color: #2c2a4a;
+        position: absolute;
+        left: 30px;
+        top: 0;
+        animation: animloader 2s 0.2s ease infinite;
+    }
+    .loader::before {
+        animation-delay: 0.4s;
+        left: 60px;
+    }
+   
+    @keyframes animloader {
+        0% {
+            top: 0;
+            color: #2c2a4a;
+        }
+        50% {
+            top: 30px;
+            color: #bfb8ad;
+        }
+        100% {
+            top: 0;
+            color: #2c2a4a;
+        }
+    }
+ 
+button.signout {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    padding: 7px 14px;
+    font-size: 15px;
+    font-weight: bold;
+}
+ 
+button.accueil{
+        position: absolute;
+        top: 75px;
+        right: 45px;
+        padding: 7px 14px;
+        font-size: 15px;
+        font-weight: bold;
+}
+ 
+button.matchmaking {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        bottom: 50%; /* Adjust the value as needed */
+        left: 50%; /* Adjust the value as needed */
+        transform: translate(-50%, 50%);
+        bottom: 200px;
+        margin: 0;
+}
+ 
+ 
+span{
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     text-align: center;
+     font-size: 25px;
+}
+ 
+.classement{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 250px;
+    font-family: 'GermaniaOne';
+    column-gap: 70px;
+ 
+}
+ 
+.en-tete{
+display: flex;
+gap: 100px;
+}
+ 
+th{
+        display: flex;
+        padding-left: 20px;
+        padding-right: 20px;
+ 
+}

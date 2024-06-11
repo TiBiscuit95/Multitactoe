@@ -1,0 +1,111 @@
+@font-face{
+    font-family: 'GermaniaOne';
+    font-weight: 400;
+    src: url(font/GermaniaOne-Regular.ttf) format('truetype'),
+        url(font/GermaniaOne-Regular.woff)  format('woff');
+}
+ 
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+ 
+body{
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'GermaniaOne', sans-serif;
+    min-height: 100vh;
+    margin: 0;
+    background: linear-gradient(to right, #2c2a4a, #e7f0fd);
+    background: #EADEDA;
+}
+ 
+button{
+    background-color: #bfb8ad;
+    color: #2c2a4a;
+    border: 1px solid #bfb8ad;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 20px 40px;
+    margin-top: 24px;
+    letter-spacing: 1px;
+    border-radius: 50px;
+    border-color: #2c2a4a;
+    transition: .2s ease-in;
+    box-shadow: 0 2px 8px rgba(0, 32, 63, .45),
+                0 2px 2px rgba(0, 32, 63, .45) ;
+    font-family: 'GermaniaOne', sans-serif;
+}
+ 
+button:hover{
+    cursor: pointer;
+    background-color: #2c2a4a;
+    color: #FFFFFF;
+}
+ 
+button:active{
+    transform: scale(.75);
+}
+ 
+h1{
+    position: relative;
+    font-size: 60px;
+    transform: translateX(0);
+    margin-bottom: 45px;
+    margin-top: 0;
+}
+ 
+.container-cases {
+    display: flex;
+    flex-wrap: wrap;
+    width: 300px; /* Exemple de largeur totale */
+    justify-content: center;
+    margin-top: 45px;
+    margin-bottom: 50px;
+    box-shadow: 0 0px 0px rgba(0, 32, 63, .45),
+                0 1px 1px rgba(0, 32, 63, .45) ;
+  }
+ 
+  .case {
+    width: 30%; /* Pour que 3 cases tiennent sur une ligne */
+    height: 100px; /* Hauteur fixe pour la démonstration */
+    border: 1px solid black; /* Visibilité des cases */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFFFFF;
+  }
+ 
+select{
+    font-family: 'GermaniaOne', sans-serif;
+    font-size: 20px;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+ 
+option{
+    font-family: 'GermaniaOne', sans-serif;
+    font-size: 25px;
+}
+ 
+button.signout {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    padding: 7px 14px;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: 'GermaniaOne', sans-serif;
+}
+ 
+option{
+    display: flex;
+    justify-content: center;
+}
